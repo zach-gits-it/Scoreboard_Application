@@ -1,0 +1,58 @@
+<html></html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <link href="/Users/zacharykklingenberg/Desktop/Intro-To-Java-Script-Scrimba/Score_Board_App/Score-Board-Media">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="primary_board">
+        <div class="container">
+            <div>
+                <h3>LAKERS</h3>
+                <div class="home_score">
+                <h4 id="home_points" class="black-ops-one-regular">0</h4>
+                </div>
+                <div class="add_points">
+                    
+                    <button class="add_points_child" id="home_plus_1" onclick="homeScore1(); textContentTransform(); checkScores();">+1</button>
+                
+                    <button class="add_points_child" id="home_plus_2" onclick="homeScore2(); textContentTransform2(); checkScores();">+2</button>
+                    <button class="add_points_child" id="home_plus_3" onclick="homeScore3(); textContentTransform3(); checkScores();">+3</button>
+                </div>
+            </div>
+            <div>
+                <h3>GUEST</h3>
+                <div class="guest_score">
+                <h4 id="guest_points" class="black-ops-one-regular">0</h4>
+                </div> 
+                <div class="add_points">
+                    <button class="add_points_child" id="guest_plus_1" onclick="guestScore1(); textContentTransformGuest(); checkScores();">+1</button>
+                    <button class="add_points_child" id="guest_plus_2" onclick="guestScore2(); textContentTransformGuest2(); checkScores();">+2</button>
+                    <button class="add_points_child" id="guest_plus_3" onclick="guestScore3(); textContentTransformGuest3(); checkScores();">+3</button>
+                </div>
+                  
+            </div> <!-- closing guest_board div -->
+            
+            <div class="timer_div" id="time_element">
+                <button id="timer_button" onclick="startTime();">TIME</button>
+                <div id="display_clock"></div>
+            </div>
+
+        </div> <!-- closing the container div -->
+
+    </div> <!-- closing primary_board div -->
+        
+        
+        <div id="video-container" style="display: none;" class="video_container">
+            <div class="video_player">
+            <video src="/Users/zacharykklingenberg/Desktop/Intro-To-Java-Script-Scrimba/Score_Board_App/Score-Board-Media" type="video/mp4"></video>
+            </div>
+        </div>  
+
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    </body>
+</html>
